@@ -1,0 +1,46 @@
+.modal-previous-btn{
+    &:hover{
+        .modal-btn {
+            filter: brightness(0) saturate(100%) invert(57%) sepia(9%) saturate(5234%) hue-rotate(344deg) brightness(100%) contrast(105%);
+        }
+    }
+}
+
+.modal-next-btn{
+    &:hover{
+        .modal-btn {
+            filter: brightness(0) saturate(100%) invert(57%) sepia(9%) saturate(5234%) hue-rotate(344deg) brightness(100%) contrast(105%);
+        }
+    }
+}
+
+.modal-tmb-container {
+    &:hover {
+        .thumb-back{
+            opacity: 1;
+        }
+        .modal-thumbnail-img{
+            opacity: 0.5;
+        }
+    }
+}
+
+.modal-select {
+    .thumb-back{
+        opacity: 1;
+    }
+    .img-select{
+        opacity: 0.5;
+    }
+}
+
+.thumb-back {
+    position: absolute;
+    height: 100px;
+    width: 96px;
+    top: 0;
+    border-radius: 12px;
+    background: white;
+    z-index: -1;
+    opacity: 0;
+}

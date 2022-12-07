@@ -1,0 +1,259 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  max-width: 1536px;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.menu_cross-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  margin-right: 15px;
+  cursor: pointer;
+  z-index: 4;
+  display: none;
+}
+
+.logo-list-container {
+  display: flex;
+  align-items: center;
+}
+.logo-list-container .name-logo {
+  margin-right: 35px;
+}
+.logo-list-container ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.logo-list-container ul li {
+  margin: 0 20px;
+  padding: 45px 0 41px 0;
+  list-style: none;
+  border-bottom: 4px solid rgb(255, 255, 255);
+  cursor: pointer;
+  color: hsl(219deg, 9%, 45%);
+}
+.logo-list-container ul li:hover {
+  border-bottom: 4px solid hsl(26deg, 100%, 55%);
+  color: hsl(220deg, 13%, 13%);
+}
+
+.cart-avatar-container {
+  display: flex;
+  align-items: center;
+}
+.cart-avatar-container .avatar-container {
+  height: 50px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-left: 40px;
+  box-sizing: content-box;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+.cart-avatar-container .avatar-container:hover {
+  border: 2px solid hsl(26deg, 100%, 55%);
+}
+.cart-avatar-container .avatar-user {
+  height: 50px;
+}
+
+.cart-Details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: 25px;
+  right: -160px;
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(114, 114, 114, 0.3);
+  background: white;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+
+.cart {
+  border-bottom: 1px solid hsl(0, 0%, 84%);
+  padding: 25px 20px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.bubble-alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: hsl(26deg, 100%, 55%);
+  padding: 1px 6.5px 1px 6.5px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.6rem;
+  top: -6px;
+  right: -5px;
+  cursor: pointer;
+}
+
+.cart-thumbnail {
+  width: 50px;
+  border-radius: 5px;
+}
+
+.cart-name {
+  font-size: 1rem;
+  color: hsl(219, 9%, 45%);
+  font-weight: 400;
+}
+
+.cart-total {
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.cart-span {
+  color: hsl(219, 9%, 45%);
+  margin: 0 5px;
+}
+
+.cart-price {
+  color: hsl(219, 9%, 45%);
+}
+
+.cart-quantity {
+  color: hsl(219, 9%, 45%);
+}
+
+.checkout-btn {
+  border: none;
+  background: hsl(26deg, 100%, 55%);
+  color: white;
+  padding: 20px 20px;
+  border-radius: 10px;
+  margin: 0px 20px 30px 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+}
+
+.empty-cart {
+  margin: auto 0;
+  color: hsl(219, 9%, 45%);
+  font-weight: 700;
+}
+
+.cart-icon:hover {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(2011%) hue-rotate(182deg) brightness(98%) contrast(89%);
+}
+
+
+@media (max-width:1280px){
+  .logo-list-container ul li {
+    font-size: 0.93rem;
+  }
+
+  .cart-avatar-container .avatar-container {
+    height: 45px;
+    margin-left: 30px;
+  }
+
+  .cart-avatar-container .avatar-user {
+    height: 45px;
+  }
+
+  .logo-list-container ul li {
+    margin: 0 15px;
+    padding: 45px 0 41px 0;
+  }
+}
+
+
+@media (max-width:1100px){
+  .logo-list-container ul li {
+    font-size: 0.9rem;
+  }
+
+  .cart-avatar-container .avatar-container {
+    height: 40px;
+    
+  }
+
+  .cart-avatar-container .avatar-user {
+    height: 40px;
+  }
+
+  .cart-Details {
+    z-index: 1;
+  }
+
+  
+}
+
+@media (max-width:1024px){
+  nav {
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .ul {
+    display: none;
+  }
+
+  .ul li {
+    display: none;
+  }
+
+  .logo-list-container {
+    padding: 30px 0;
+  }
+
+  .cart-Details {
+    right: -62px;
+  }
+
+  .menu_cross-icons {
+    padding-top: 4px;
+    display: block;
+  }
+
+}
+
+@media (max-width:420px) {
+
+  .cart-avatar-container .avatar-container {
+    height: 25px;
+    margin-left: 20px;
+  }
+
+  .cart-avatar-container .avatar-user {
+    height: 25px;
+  }
+
+  .logo-list-container {
+    padding: 26px 0;
+  }
+
+  .cart-Details {
+    margin-top: 35px;
+  }
+  
+}
+

@@ -1,0 +1,177 @@
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    max-width: 571.2px;
+    text-align: left;
+    margin-left: 120px;
+}
+
+.prices-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.price-discount {
+    display: flex;
+    align-items: center
+}
+
+.company {
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.name {
+    font-size: 2.6rem;
+    margin: 15px 0 32px 0;
+}
+
+.p {
+    line-height: 26px;
+    color:hsl(219, 9%, 45%);
+    margin-bottom: 25px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.real-price-container {
+    display: flex; 
+    align-items: center;
+    height: 100%;
+}
+
+.real-price {
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+    font-weight: 700;
+    margin-bottom: 38px;
+}
+
+.discount{
+    margin-left: 16px;
+    margin-bottom: 10px;
+    color: hsl(26, 100%, 55%);
+    padding: 3px 9px;
+    font-weight: 700;
+    background: hsla(26, 100%, 55%, 0.15);
+    border-radius: 5px;
+}
+
+@media (max-width:1280px) {
+
+    .name {
+        font-size: 2.3rem;
+        margin: 15px 0 13px 0;
+    }
+
+    .description-container{
+        margin-left: 80px;
+    }
+
+    .prices-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .real-price {
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+
+    .price {
+        margin-bottom: 0;
+    }
+
+    .discount {
+        margin-bottom: 0;
+    }
+
+    .p {
+        margin-bottom: 13px;
+    }
+}
+
+
+@media (max-width:1100px) {
+
+    .description-container{
+        margin-left: 60px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .description-container{
+        width: 42vw;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:840px) {
+    .description-container{
+        width: 48vw;
+    }
+}
+
+@media (max-width:700px) {
+    .description-container{
+        width: 55vw;
+    }
+}
+
+@media (max-width:550px) {
+    .description-container{
+        width: 65vw;
+    }
+}
+
+
+@media (max-width:420px){
+
+    .description-container{
+        width: 100%;
+        padding: 0 25px;
+        margin-top: 20px;
+    }
+
+    .company {
+        font-size: 0.7rem;
+    }
+
+    .name {
+        font-size: 1.7rem;
+    }
+
+    .p {
+        line-height: 24px;
+        font-size: 14.5px;
+    }
+
+    .price {
+        font-size: 1.7rem;
+    }
+
+    .prices-container {
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+}

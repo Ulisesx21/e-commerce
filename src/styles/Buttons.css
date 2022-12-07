@@ -1,0 +1,120 @@
+.btns-container {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.btns-next-prev {
+    background: hsl(223, 64%, 98%);
+    border-radius: 10px; 
+    display: flex;
+    max-width: 155px;
+}
+
+.btn-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: hsl(26, 100%, 55%);
+    background: hsl(223, 64%, 98%);
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-left: 8px;
+    padding-top: 5px;
+}
+
+.btn-minus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: hsl(26, 100%, 55%);
+    background: hsl(223, 64%, 98%);
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-right: 8px;
+    padding-top: 5px;
+}
+
+.btn-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: hsl(26, 100%, 55%);
+    border-radius: 10px;
+    color:white;
+    font-weight: 700;
+    width: 266.533px;
+    padding: 18px 75px;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 0.92rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px hsla(26, 100%, 55%, 0.4);
+}
+.btn-add:hover {
+    background: hsla(26, 100%, 55%, 0.75);
+}
+
+.btn-add img {
+    width: 17px;
+    margin-right: 15px;
+}
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    width: 55px;
+}
+
+
+@media (max-width:1280px) {
+    .btns-container {
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn-add {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .btn-plus {
+        padding-top: 0;
+    }
+
+    .btn-minus {
+        padding-top: 0;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .btns-next-prev {
+        justify-content: space-between;
+        min-width: 100%;
+    }
+
+    .btn-add {
+        width: 100%;
+    }
+
+    .btn-plus {
+        padding-left: 0px;
+    }
+
+    .btn-minus {
+        padding-right: 0px;
+    }
+}
