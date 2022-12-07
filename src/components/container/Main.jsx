@@ -169,6 +169,7 @@ const Main = () => {
             { menuState && 
                 <MobileMenu
                     changeMenuStatus={changeMenuStatus}
+                    menuState={menuState}
                 >
                 </MobileMenu>
             }

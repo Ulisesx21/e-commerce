@@ -31,7 +31,7 @@ const Header = ({ cartState, changeCartState, cart, clearCart, menuState, change
                             <img src={CartIcon} alt="cart-icon" className='cart-icon' />
                             {cart[0]?.quantity > 0 && <div className='bubble-alert'>{cart[0]?.quantity > 9 ? "9+" : cart[0]?.quantity}</div>}
                         </div>
-                        {cartState && 
+                        {cartState &&
                         <div className='cart-Details'>
                             <div className='cart'>Cart</div>
                             {cart.map((product, idx) => 

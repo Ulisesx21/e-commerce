@@ -160,7 +160,6 @@ nav {
   filter: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(2011%) hue-rotate(182deg) brightness(98%) contrast(89%);
 }
 
-
 @media (max-width:1280px){
   .logo-list-container ul li {
     font-size: 0.93rem;

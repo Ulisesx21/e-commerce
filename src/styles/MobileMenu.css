@@ -20,7 +20,25 @@
     left: 0;
     top: 0;
     bottom: 0;
+    
+    animation-duration: 0.5s;
+    animation-name: slidein;
 }
+
+.menu-active {
+    margin-left: 0;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -60vw;
+    }
+  
+    to {
+        margin-left: 0px;
+    }
+  }
+
 
 .mobile-menu ul {
     display: flex;
@@ -34,6 +52,7 @@
     list-style: none;
     font-weight: 700;
     padding: 15px 25px;
+    cursor: pointer;
 }
 
 

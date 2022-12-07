@@ -1,11 +1,11 @@
 import React from 'react';
 import "../../styles/MobileMenu.css"
 
-const MobileMenu = ({ changeMenuStatus }) => {
+const MobileMenu = ({ changeMenuStatus, menuState }) => {
     return (
         <div className='mobile-menu-container'>
             <div className='back' onClick={()=> changeMenuStatus()}></div>
-            <div className='mobile-menu'>
+            <div className={`mobile-menu ${menuState && "menu-active"}`}>
                 <ul>
                     <li>Collections</li>
                     <li>Men</li>
