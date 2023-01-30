@@ -35,7 +35,7 @@ const Header = ({ cartState, handleCartState, cart, clearCart, menuState, handle
                         <div className='cart-Details'>
                             <div className='cart'>Cart</div>
                             {cart.map((product, idx) => 
-                                <Cart product={product} idx={idx} clearCart={clearCart}></Cart>
+                                <Cart product={product} idx={idx} clearCart={clearCart} key={idx}></Cart>
                             )}
                             {cart.length > 0 
                             ? 

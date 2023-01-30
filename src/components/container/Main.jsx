@@ -119,9 +119,6 @@ const Main = () => {
         setMenuState(!menuState)
     }
 
-    
-    
-
     return (
         <div className='main-container'>
             <Header

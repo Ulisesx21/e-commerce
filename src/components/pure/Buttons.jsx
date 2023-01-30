@@ -4,7 +4,7 @@ import PlusIcon from "../../icons/icon-plus.svg";
 import MinusIcon from "../../icons/icon-minus.svg";
 import "../../styles/Buttons.css"
 
-const Buttons = ({ addToCart, handleQuantity, quantity, product}) => {
+const Buttons = ({ addToCart, handleQuantity, quantity }) => {
     return (
         <div className="btns-container">
             <div className='btns-next-prev'>

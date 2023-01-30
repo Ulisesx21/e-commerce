@@ -14,11 +14,12 @@ const Images = ({ thumbnails, handleMainImage, handleModalState, images, imgNumb
                     {thumbnails.map((thumbnail, idx) =>
                         <div
                             key={idx}
-                            className={`thumbnail-container 
-                        ${idx === 0 && "thumbnail-left"}
-                        ${idx === 3 && "thumbnail-right"}
-                        ${idx === imgNumber && "thumbnail-select"}
-                        `}
+                            className={
+                            `thumbnail-container 
+                            ${idx === 0 && "thumbnail-left"}
+                            ${idx === 3 && "thumbnail-right"}
+                            ${idx === imgNumber && "thumbnail-select"}`
+                            }
                         >
                             <img
                                 src={thumbnail}

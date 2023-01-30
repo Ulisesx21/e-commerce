@@ -2,7 +2,7 @@ import React from 'react';
 import DeleteIcon from "../../icons/icon-delete.svg";
 import "../../styles/Cart.css"
 
-const Cart = ({ product, idx, clearCart}) => {
+const Cart = ({ product, idx, clearCart }) => {
     return (
         <div>
             <div key={idx} className="cart-container">
