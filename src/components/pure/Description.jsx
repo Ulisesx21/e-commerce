@@ -2,7 +2,7 @@ import React from 'react';
 import Buttons from './Buttons';
 import "../../styles/Description.css"
 
-const Description = ({ addToCart, changeQuantity, quantity, product }) => {
+const Description = ({ addToCart, handleQuantity, quantity, product }) => {
 
     const {
         id,
@@ -33,7 +33,7 @@ const Description = ({ addToCart, changeQuantity, quantity, product }) => {
             </div>
             <Buttons
                 addToCart={addToCart}
-                changeQuantity={changeQuantity}
+                handleQuantity={handleQuantity}
                 quantity={quantity}
                 id={id}
             >

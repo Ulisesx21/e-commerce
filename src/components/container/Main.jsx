@@ -3,8 +3,8 @@ import Header from '../pure/Header';
 import Description from '../pure/Description';
 import Images from '../pure/Images';
 import Modal from '../pure/Modal';
-import { data } from "../../data/data"
-import "../../styles/Main.css"
+import data from "../../data/data.json";
+import "../../styles/Main.css";
 import MobileMenu from '../pure/MobileMenu';
 
 
@@ -55,7 +55,7 @@ const Main = () => {
         setCart([])
     }
 
-    const changeQuantity = (str) => {
+    const handleQuantity = (str) => {
             return str === "+" 
             ? 
             setProductQuantity(productQuantity + 1) 
@@ -65,11 +65,11 @@ const Main = () => {
                 : setProductQuantity(productQuantity - 1)  
     }
 
-    const changeMainImage = (idx) => {
+    const handleMainImage = (idx) => {
         setImgNumber(idx)
     }
 
-    const changeNumber = (str) => {
+    const handleNumber = (str) => {
         if(str === "+"){
             if(imgNumber === images.length-1){
                 setImgNumber(0)
@@ -85,16 +85,16 @@ const Main = () => {
         }
     }
 
-    const changeCartState = () => {
+    const handleCartState = () => {
         setCartState(!cartState)
     }
 
-    const changeModalState = () => {
+    const handleModalState = () => {
         setModalState(!modalState)
     }
 
     // With Icons: previous, next
-    const changeModalImage = (str) => {
+    const handleModalImage = (str) => {
         if(str === "+"){
             if(modalImgNumber === mainModalImg.length-1){
                 setModalImgNumber(0)
@@ -111,11 +111,11 @@ const Main = () => {
         console.log(modalImgNumber)
     }
     // With thumnails images
-    const changeModalImage2 = (idx) => {
+    const handleModalImage2 = (idx) => {
         setModalImgNumber(idx)
     }
 
-    const changeMenuStatus = () => {
+    const handleMenuStatus = () => {
         setMenuState(!menuState)
     }
 
@@ -126,11 +126,11 @@ const Main = () => {
         <div className='main-container'>
             <Header
                 cartState={cartState}
-                changeCartState={changeCartState}
+                handleCartState={handleCartState}
                 cart={cart}
                 clearCart={clearCart}
                 menuState={menuState}
-                changeMenuStatus={changeMenuStatus}
+                handleMenuStatus={handleMenuStatus}
             >
             </Header>
             <div className='images-description-container'>
@@ -138,15 +138,15 @@ const Main = () => {
                     images={images}
                     imgNumber={imgNumber} 
                     thumbnails={thumbnailImages} 
-                    changeMainImage={changeMainImage}
-                    changeModalState={changeModalState}
-                    changeNumber={changeNumber}
+                    handleMainImage={handleMainImage}
+                    handleModalState={handleModalState}
+                    handleNumber={handleNumber}
                 >
                     
                 </Images>
                 <Description 
                     addToCart={addToCart}
-                    changeQuantity={changeQuantity}
+                    handleQuantity={handleQuantity}
                     quantity={productQuantity}
                     product={data}
                 >
@@ -156,11 +156,11 @@ const Main = () => {
                 <Modal
                     images={images}
                     modalThumbnails={modalThumbnails}
-                    changeModalState={changeModalState}
+                    handleModalState={handleModalState}
                     modalState={modalState}
                     mainModalImg={mainModalImg}
-                    changeModalImg={changeModalImage}
-                    changeModalImage2={changeModalImage2}
+                    handleModalImg={handleModalImage}
+                    handleModalImage2={handleModalImage2}
                     modalImgNumber={modalImgNumber}
                 >
                 </Modal>
@@ -168,7 +168,7 @@ const Main = () => {
 
             { menuState && 
                 <MobileMenu
-                    changeMenuStatus={changeMenuStatus}
+                    handleMenuStatus={handleMenuStatus}
                     menuState={menuState}
                 >
                 </MobileMenu>

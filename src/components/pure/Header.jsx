@@ -8,12 +8,12 @@ import CloseIcon from "../../icons/icon-close.svg"
 import "../../styles/Header.css";
 import Cart from './Cart';
 
-const Header = ({ cartState, changeCartState, cart, clearCart, menuState, changeMenuStatus }) => {
+const Header = ({ cartState, handleCartState, cart, clearCart, menuState, handleMenuStatus }) => {
     return (
         <header>
             <nav>
                 <div className='logo-list-container'>
-                    <div className='menu_cross-icons' onClick={() => changeMenuStatus()}>
+                    <div className='menu_cross-icons' onClick={() => handleMenuStatus()}>
                         <img src={ menuState ? CloseIcon : MenuIcon} alt={"img"}></img>
                     </div>
                     <img src={Logo} alt="name-logo" className='name-logo'/>
@@ -27,7 +27,7 @@ const Header = ({ cartState, changeCartState, cart, clearCart, menuState, change
                 </div>
                 <div className='cart-avatar-container'>
                     <div style={{position: "relative"}}>
-                        <div style={{display: "flex"}} onClick={() => changeCartState()}>
+                        <div style={{display: "flex"}} onClick={() => handleCartState()}>
                             <img src={CartIcon} alt="cart-icon" className='cart-icon' />
                             {cart[0]?.quantity > 0 && <div className='bubble-alert'>{cart[0]?.quantity > 9 ? "9+" : cart[0]?.quantity}</div>}
                         </div>

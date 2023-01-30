@@ -3,11 +3,11 @@ import NextIcon from "../../icons/icon-next.svg"
 import PreviousIcon from "../../icons/icon-previous.svg"
 import "../../styles/Images.css"
 
-const Images = ({ thumbnails, changeMainImage, changeModalState, images, imgNumber, changeNumber }) => {
+const Images = ({ thumbnails, handleMainImage, handleModalState, images, imgNumber, handleNumber }) => {
     return (
         <>
             <div className='images-container'>
-                <div className='main-image-container' onClick={() => changeModalState()}>
+                <div className='main-image-container' onClick={() => handleModalState()}>
                     <img src={images[imgNumber]} alt="img" />
                 </div>
                 <div className='thumbnail-images'>
@@ -23,7 +23,7 @@ const Images = ({ thumbnails, changeMainImage, changeModalState, images, imgNumb
                             <img
                                 src={thumbnail}
                                 alt="img"
-                                onClick={() => changeMainImage(idx)}
+                                onClick={() => handleMainImage(idx)}
                                 className={`thumbnail-img ${idx === imgNumber && "img-select"}`}
                             />
                         </div>
@@ -32,13 +32,13 @@ const Images = ({ thumbnails, changeMainImage, changeModalState, images, imgNumb
 
             </div>
             <div className='mobile-img-container'>
-                <div className='mobile-previous-btn' onClick={() => changeNumber("-")}>
+                <div className='mobile-previous-btn' onClick={() => handleNumber("-")}>
                     <img src={PreviousIcon} alt={"img"} className="mobile-icon" />
                 </div>
                 <div className='equisde'>
                     <img src={images[imgNumber]} alt={"img"} className="mobile-main-img" />
                 </div>
-                <div className='mobile-next-btn' onClick={() => changeNumber("+")}>
+                <div className='mobile-next-btn' onClick={() => handleNumber("+")}>
                     <img src={NextIcon} alt={"img"} className="mobile-icon" />
                 </div>
             </div>

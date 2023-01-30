@@ -5,38 +5,37 @@ import NextIcon from "../../icons/icon-next.svg"
 import "../../styles/Modal.css"
 import "../../styles/Modal2.scss"
 
-const Modal = ({ 
-    images, 
+const Modal = ({  
     modalThumbnails,
-    changeModalState, 
+    handleModalState, 
     modalState, 
     mainModalImg, 
-    changeModalImg, 
+    handleModalImg, 
     modalImgNumber, 
-    changeModalImage2
+    handleModalImage2
     }) => {
 
-    const handleModalState = () => {
-        modalState && changeModalState()
+    const handleState = () => {
+        modalState && handleModalState()
     }
 
     return (
         <div className='modal-container'>
-            <div className='modal' onClick={() => handleModalState()}></div>
+            <div className='modal' onClick={() => handleState()}></div>
             <div className='modal-images' >
                 <div className='cross-icon-container' >
-                    <div onClick={() => changeModalState()} style={{cursor: "pointer"}}>
+                    <div onClick={() => handleState()} style={{cursor: "pointer"}}>
                         <img src={CloseIcon} alt="img"  className='cross-icon'/>
                     </div>
                 </div>
                 <div className='modal-img-container'>
-                    <div className='modal-previous-btn' onClick={() => changeModalImg("-")}>
+                    <div className='modal-previous-btn' onClick={() => handleModalImg("-")}>
                         <img src={PreviousIcon} alt={"img"} className="modal-btn"/>
                     </div>
                     <div>
                         <img src={mainModalImg[modalImgNumber]} alt={"img"} className="modal-main-img"/>
                     </div>
-                    <div className='modal-next-btn' onClick={() => changeModalImg("+")}>
+                    <div className='modal-next-btn' onClick={() => handleModalImg("+")}>
                         <img src={NextIcon} alt={"img"} className="modal-btn"/>
                     </div>
                 </div>
@@ -47,7 +46,7 @@ const Modal = ({
                             src={image} 
                             alt={"img"} 
                             className={`modal-thumbnail-img ${idx === modalImgNumber && "img-select"}`}
-                            onClick={() => changeModalImage2(idx)}
+                            onClick={() => handleModalImage2(idx)}
                             />
                             <div className='thumb-back'></div>
                         </div>
